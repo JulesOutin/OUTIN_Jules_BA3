@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+ul {
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+
+li {
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    margin-right: 3%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+	align-items: center;
+	align-content: stretch;
+    margin-bottom: 3%;
+}

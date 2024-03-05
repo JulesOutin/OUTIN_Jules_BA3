@@ -1,0 +1,10 @@
+<app-header></app-header>
+<ul>
+  <li *ngFor="let item of items">
+    <h3>{{ item.Name }}</h3>
+    <img [src]="item['Closet Image']" alt="Image">
+    
+    <p>Saison: {{ item['Seasonal Availability'] }}</p>
+    <p>{{ item.Buy === 'NFS' ? "N'est plus disponible" : item.Buy + ' Eur' }}</p>
+  </li>
+</ul>

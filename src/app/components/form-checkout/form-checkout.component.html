@@ -1,0 +1,48 @@
+<div class="checkout">
+  <form method="post"  class="form_checkout" [formGroup]="fg">
+    
+    <input type="text" id="nom" formControlName="lastname" name="nom" placeholder="Nom" required>
+
+    <input type="text" id="prenom" formControlName="firstname" name="prenom" placeholder="Prénom" required>
+
+    <input type="text" id="adresse" formControlName="address" name="adresse" placeholder="Adresse" required>
+
+    <input type="text" id="codePostal" formControlName="zip" name="codePostal" placeholder="Code postal" required>
+
+    <input type="text" id="ville" formControlName="city" name="ville" placeholder="Ville" required>
+
+    <input type="number" id="numeroCarte" formControlName="cardNumber" name="numeroCarte" placeholder="Numéro de carte" required>
+
+    <h2>Date de validité de la carte</h2>
+    <div class="date_cart">
+      <select formControlName="monthCardExpiration">
+        <option value="1">Janvier</option>
+        <option value="2">Février</option>
+        <option value="3">Mars</option>
+        <option value="4">Avril</option>
+        <option value="5">Mai</option>
+        <option value="6">Juin</option>
+        <option value="7">Juillet</option>
+        <option value="8">Août</option>
+        <option value="9">Septembre</option>
+        <option value="10">Octobre</option>
+        <option value="11">Novembre</option>
+        <option value="12">Décembre</option>
+      </select>
+      <select formControlName="yearCardExpiration">
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023">2023</option>
+        <option value="2024">2024</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+        <option value="2027">2027</option>
+        <option value="2028">2028</option>
+        <option value="2029">2029</option>
+        <option value="2030">2030</option>
+      </select>
+    </div>
+    <input type="text" name="" id="" placeholder="CVV" required>
+    <button type="submit" (click)="onSubmit()">Envoyer</button>
+  </form>
+</div>

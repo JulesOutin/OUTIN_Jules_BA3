@@ -1,0 +1,38 @@
+.panier {
+    margin-top: 10%;
+    background-color: #00353F;
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 80%;
+    height: 70vh;
+    margin-left: 10%;
+}
+
+table {
+    width: 80%;
+ 
+    margin-top: 5%;
+    text-align: center;
+}
+thead {
+    background-color: #08C5D1;
+    color: #00353F;
+    border-radius: 20px;
+}
+
+tr {
+    border: 1px solid #00353F;
+    border-radius: 20px;
+    margin-bottom: 5%;
+
+}
+
+tbody {
+    background-color: #08C5D1;
+    color: #00353F;
+    border-radius: 20px;
+}

@@ -1,10 +1,18 @@
 <app-header></app-header>
 <ul>
   <li *ngFor="let item of items">
-    <h3>{{ item.Name }}</h3>
-    <img [src]="item['Closet Image']" alt="Image">
     
-    <p>Saison: {{ item['Seasonal Availability'] }}</p>
-    <p>{{ item.Buy === 'NFS' ? "N'est plus disponible" : item.Buy + ' Eur' }}</p>
+      <h3>{{ item.Name }}</h3>
+      <img [src]="item['Closet Image']" alt="Image">
+      <p>Saison: {{ item['Seasonal Availability'] }}</p>
+      <p>{{ item.Buy === 'NFS' ? "N'est plus disponible" : item.Buy + ' Eur' }}</p>
+        <button (click)="showDetails()">Show Details</button>
+        <button (click)="removeDetails()">Remove Details</button>
+        <p class="infos" *ngIf="showDetailsClicked">Source : {{ item.Source }}</p>
+        <p class="infos" *ngIf="showDetailsClicked">Style : {{ item.Style }}</p>
+        <p class="infos" *ngIf="showDetailsClicked">Thème : {{ item['Label Themes'] }}</p>
+    <app-form-add></app-form-add>
   </li>
 </ul>
+
+

@@ -20,7 +20,7 @@ export class FormCheckoutComponent {
     cardNumber: new FormControl('', [Validators.required, Validators.pattern(/^\d{16}$/)]),
     monthCardExpiration: new FormControl('', Validators.required),
     yearCardExpiration: new FormControl('', Validators.required),
-    cardExpiration: new FormControl('', [Validators.required, this.validateCardExpiration.bind(this)]),
+    cardExpiration: new FormControl('', [Validators.required]),
   });
 
   ngOnInit() {
@@ -34,19 +34,19 @@ export class FormCheckoutComponent {
     }
   }
 
-  validateCardExpiration(control: FormControl): {[key: string]: any} | null {
-    const currentDate = new Date();
-    const month = Number(this.fg.get('monthCardExpiration')?.value);
-    const year = Number(this.fg.get('yearCardExpiration')?.value);
-    const cardExpirationDate = new Date(year, month - 1);
-    if (cardExpirationDate < currentDate) {
-      console.log('expired');
-      alert('Your card is expired');
-      return { expired: true };
-    }
-    console.log('not expired');
-    return null;
-  }
+  // validateCardExpiration(control: FormControl): {[key: string]: any} | null {
+  //   const currentDate = new Date();
+  //   const month = Number(this.fg.get('monthCardExpiration')?.value);
+  //   const year = Number(this.fg.get('yearCardExpiration')?.value);
+  //   const cardExpirationDate = new Date(year, month - 1);
+  //   if (cardExpirationDate < currentDate) {
+  //     console.log('expired');
+  //     alert('Your card is expired');
+  //     return { expired: true };
+  //   }
+  //   console.log('not expired');
+  //   return null;
+  // }
 
   getLastName() {
     return this.fg.get('name');
